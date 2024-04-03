@@ -1,4 +1,4 @@
-package org.exercise.ListOne.ex1;
+package org.exercise.listOne.ex1;
 
 public class Register {
     String fullName;

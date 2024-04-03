@@ -1,4 +1,4 @@
-package org.exercise.ListOne.ex2;
+package org.exercise.listOne.ex2;
 import java.lang.Thread;
 
 import java.util.Scanner;

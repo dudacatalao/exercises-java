@@ -1,4 +1,4 @@
-package org.exercise.ListOne.ex2;
+package org.exercise.listOne.ex2;
 
 public class Calculing {
     double number1;

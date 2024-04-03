@@ -1,4 +1,4 @@
-package org.exercise.ListOne.ex3;
+package org.exercise.listOne.ex3;
 
 import java.util.Scanner;
 

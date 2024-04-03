@@ -1,4 +1,4 @@
-package org.exercise.ListOne.ex7;
+package org.exercise.listOne.ex7;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

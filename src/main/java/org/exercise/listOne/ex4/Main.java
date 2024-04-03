@@ -1,4 +1,4 @@
-package org.exercise.ListOne.ex4;
+package org.exercise.listOne.ex4;
 
 import java.util.Scanner;
 
