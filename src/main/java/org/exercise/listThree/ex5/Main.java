@@ -6,6 +6,17 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
+        do {
+            System.out.print("Insert the balance: R$");
+            float firstBalance = sc.nextFloat();
+
+            System.out.println("Do you want to insert more balance?");
+            String option = sc.next().toLowerCase();
+
+        }while (){
+
+        }
+
 
 
     }
