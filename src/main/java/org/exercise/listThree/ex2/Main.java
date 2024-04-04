@@ -1,6 +1,7 @@
 package org.exercise.listThree.ex2;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -10,30 +11,34 @@ public class Main {
         ArrayList<Float> heights = new ArrayList<>();
         ArrayList<Float> weights = new ArrayList<>();
 
-        for(int i = 1; i < 11; i++){
-            System.out.println("--------------------------------------------------");
-            System.out.print("Insert the age of the " + i + "° person: ");
-            int age = sc.nextInt();
+        try{
+            for(int i = 1; i < 11; i++){
+                System.out.println("--------------------------------------------------");
+                System.out.print("Insert the age of the " + i + "° person: ");
+                int age = sc.nextInt();
 
-            System.out.print("Insert the height of the " + i +"° person(m): ");
-            float height = sc.nextFloat();
+                System.out.print("Insert the height of the " + i +"° person(m): ");
+                float height = sc.nextFloat();
 
-            System.out.print("Insert your weight of the "+ i + "° person(kg): ");
-            float weight = sc.nextFloat();
+                System.out.print("Insert your weight of the "+ i + "° person(kg): ");
+                float weight = sc.nextFloat();
 
-            if (age > 50){
-                ages.add(age);
-            } else if (height > 1.60) {
-                heights.add(height);
-            } else if (weight < 80.00 ) {
-                weights.add(weight);
+                if (age > 50){
+                    ages.add(age);
+                } else if (height > 1.60) {
+                    heights.add(height);
+                } else if (weight < 80.00 ) {
+                    weights.add(weight);
+                }
             }
+        }catch (InputMismatchException e){
+            System.out.println("Invalid data.");
         }
 
         System.out.println("--------------------------------------------------");
         System.out.println("People aged over 50 years:");
         for (int i = 0; i < ages.size(); i++) {
-            System.out.print(ages.get(i));
+            System.out.println(ages.get(i));
             if (i < ages.size() - 1) {
                 System.out.println(", ");
             }
@@ -42,7 +47,7 @@ public class Main {
         System.out.println("--------------------------------------------------");
         System.out.println("People taller than 1.60m:");
         for (int i = 0; i < heights.size(); i++) {
-            System.out.print(heights.get(i));
+            System.out.println(heights.get(i));
             if (i < heights.size() - 1) {
                 System.out.println(", ");
             }
@@ -51,7 +56,7 @@ public class Main {
         System.out.println("--------------------------------------------------");
         System.out.println("People weighing less than 80kg:");
         for (int i = 0; i < weights.size(); i++) {
-            System.out.print(weights.get(i));
+            System.out.println(weights.get(i));
             if (i < weights.size() - 1) {
                 System.out.println(", ");
             }
@@ -59,8 +64,3 @@ public class Main {
 
     }
 }
-
-//FUP que peça a idade, a altura e o peso de 10 pessoas e mostre na tela:
-//a. Quantas tem idade acima de 50 anos
-//b. Quantas tem altura acima de 1.60m
-//c. Quantas tem peso abaixo de 80kg

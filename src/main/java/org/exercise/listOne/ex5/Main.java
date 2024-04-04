@@ -26,8 +26,6 @@ public class Main {
             int minutes = sc.nextInt();
             int minutesToSeconds = minutes * 60;
 
-            System.out.println(minutesToSeconds);
-
             System.out.print("Insert the seconds: ");
             float seconds = sc.nextInt();
 
