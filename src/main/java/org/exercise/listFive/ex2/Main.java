@@ -4,9 +4,12 @@ public class Main {
     public static void main(String[] args) {
         InputOutput inputOutput = new InputOutput();
 
-        //fazer validação antes dos calculos
+        Validation validation = new Validation(inputOutput);
+        boolean validMoney = validation.validationSalary();
 
-        Calculation calculation = new Calculation(inputOutput);
-
+        if (validMoney){
+            Calculation calculation = new Calculation(inputOutput);
+            System.out.println(calculation.returnOlerite());
+        }
     }
 }
