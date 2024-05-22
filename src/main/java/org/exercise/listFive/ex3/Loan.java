@@ -1,33 +1,43 @@
 package org.exercise.listFive.ex3;
 
 public class Loan {
-    double valueLoan;
-    double totalValue;
-    double portionValue;
+    private double valueLoan;
+    private double totalValue;
+    private double portionValue;
+    private double salary;
 
     public Loan(InputOutput inputOutput){
         this.valueLoan = inputOutput.valueLoan;
+        this.salary = inputOutput.currentSalary;
+
+        System.out.println("Calculating..");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
-    double getTotalValue(){
-        return this.totalValue = this.valueLoan + ( this.valueLoan * 3.5);
+    public double getTotalValue(){
+        this.totalValue = this.valueLoan + (this.valueLoan * 0.35);
+        return this.totalValue;
     }
 
-    double getPortionValue(){
-        return this.portionValue = this.totalValue / 24;
+    public double getPortionValue(){
+        this.portionValue = this.getTotalValue() / 24;
+        return this.portionValue;
     }
 
-    String returnValues(){
+    public String returnValues(){
         return String.format(
-                "------------ Overview  of the Loan------------\n" +
-                        "| Your salary:                   R$ %.2f        |\n" +
-                        "| Total amount with interest:    R$ %.2f        |\n" +
-                        "| IRPF discount:        R$ %.2f        |\n" +
-                        "| Health Plan:          R$ %.2f        |\n" +
-                        "| Additional Hours:     R$ %.f        |\n" +
-                        "| TOTAL SALARY:         R$ %.2f        |\n" +
-                        "-----------------------------------------",
-                this.salary, discountINSS(), discountIRPF(), healthPlan(), additionExtraHour(), calculingFinalSalary()
+                "------------ Overview of the Loan ------------\n" +
+                        "| Your salary:                   R$ %.2f |\n" +
+                        "| Total amount:                  R$ %.2f |\n" +
+                        "| Total amount with interest:    R$ %.2f |\n" +
+                        "| Portion Value:                 R$ %.2f   |\n" +
+                        "----------------------------------------------",
+                this.salary, this.valueLoan ,this.getTotalValue(), this.getPortionValue()
         );
     }
 }

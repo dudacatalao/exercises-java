@@ -9,10 +9,10 @@ public class InputOutput {
 
     public InputOutput(){
         System.out.println("Hello, welcome");
-        System.out.println("Insert your current salary: R$");
+        System.out.print("Insert your current salary: R$");
         this.currentSalary = sc.nextDouble();
 
-        System.out.println("Insert the value of the loan: R$");
+        System.out.print("Insert the value of the loan: R$");
         this.valueLoan = sc.nextDouble();
     }
 
